@@ -1,0 +1,66 @@
+{
+  "name": "@harmonixjs/ui",
+  "version": "0.1.0",
+  "description": "Composable Discord UI views and controls for discord.js",
+  "keywords": [
+    "discord",
+    "discordjs",
+    "ui",
+    "components",
+    "embeds",
+    "pagination",
+    "search"
+  ],
+  "author": {
+    "name": "Maxence Bessi",
+    "email": "contact@maxence-bessi.com",
+    "url": "https://maxence-bessi.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/harmonixjs/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harmonixjs/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harmonixjs/ui/issues"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "discord.js": "^14.26.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "discord.js": "^14.26.4",
+    "typescript": "^5.4.0"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
